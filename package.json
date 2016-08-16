@@ -1,0 +1,27 @@
+{
+  "name": "npms-docker-compose",
+  "version": "1.0.0",
+  "description": "run the npms analyzer using Docker",
+  "main": "index.js",
+  "scripts": {
+    "start": "docker-compose up -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bcoe/npms-docker-compose.git"
+  },
+  "keywords": [
+    "npms.io",
+    "docker"
+  ],
+  "author": "Ben Coe <ben@npmjs.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bcoe/npms-docker-compose/issues"
+  },
+  "homepage": "https://github.com/bcoe/npms-docker-compose#readme",
+  "dependencies": {
+    "request": "^2.74.0",
+    "yargs": "^5.0.0-candidate"
+  }
+}

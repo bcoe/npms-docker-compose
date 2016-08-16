@@ -1,0 +1,24 @@
+elasticsearch:
+  image: elasticsearch:2.1.2
+  restart: always
+  command: elasticsearch -Des.script.engine.groovy.inline.search=on -Des.script.engine.groovy.inline.update=on
+  ports:
+    - "9200:9200"
+    - "9300:9300"
+  volumes:
+    - "$HOME/npms/elasticsearch/data:/usr/share/elasticsearch/data"
+
+rabbitmq:
+  image: rabbitmq:3.6.5-management
+  restart: always
+  ports:
+    - "5672:5672"
+    - "15672:15672"
+
+couchdb:
+  image: klaemo/couchdb:1.6.1
+  restart: always
+  ports:
+    - "5984:5984"
+  volumes:
+    - "$HOME/npms/couchdb:/usr/local/var/lib/couchdb"
